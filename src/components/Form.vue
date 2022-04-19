@@ -1,8 +1,4 @@
 <template>
-  <section class="intro">
-    <h1>Yahoo Poetry Fortune Teller</h1>
-    <p>Enter your name for a Yahoo Q&A poem to predict your future...</p>
-  </section>
   <form id="name-form" v-show="showForm">
     <input
       v-model="userName"
@@ -11,18 +7,20 @@
       id="fname"
       autocomplete="off"
     />
-    <button type="submit" @click="generatePoem">Generate</button>
+    <button class="cta-btn" type="submit" @click="generatePoem">
+      Generate
+    </button>
   </form>
 
   <div
-    class="poem"
+    class="poem-container"
     v-show="!showForm"
     v-for="(letter, index) in nameArray"
     :key="index"
   >
     {{ letter }}
   </div>
-  <button class="reset-btn" v-show="!showForm" @click="resetForm">
+  <button class="cta-btn reset-btn" v-show="!showForm" @click="resetForm">
     Try Again
   </button>
 </template>
@@ -74,7 +72,31 @@ export default {
 </script>
 
 <style scoped>
-.poem {
-  text-align: left;
+.poem-container {
+  display: flex;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+form input {
+  width: 250px;
+  height: 20px;
+  border: 2px #7f1f9b solid;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.cta-btn {
+  border-radius: 25px;
+  border: none;
+  background-color: #7f1f9b;
+  color: white;
+  height: 30px;
+  width: 150px;
 }
 </style>

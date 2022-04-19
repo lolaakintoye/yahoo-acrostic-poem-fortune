@@ -1,5 +1,8 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+  <img alt="Crystal Ball" src="./assets/crystal-ball.svg"/>
+  <h2>Yahoo Poetry Fortune Teller</h2>
+  <p>Enter your name for a Yahoo Q&A poem to predict your future...</p>
   <input-form />
 </template>
 
@@ -21,14 +24,13 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px;
 }
 @font-face {
   font-family: "Yahoo";
   src: url("../assets/Yahoo.ttf");
 }
-h1 {
+h2 {
   font-family: "Yahoo";
   color: #7f1f9b;
   /* font-family: 'Press Start 2P', cursive; */
