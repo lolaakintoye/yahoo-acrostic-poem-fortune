@@ -1,19 +1,15 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <img alt="Crystal Ball" src="./assets/crystal-ball.svg"/>
-  <h2>Yahoo Poetry Fortune Teller</h2>
-  <p>Enter your name for a Yahoo Q&A poem to predict your future...</p>
-  <input-form />
+  <container />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import InputForm from "@/components/Form.vue";
+import Container from "@/components/Container.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    InputForm,
+    Container,
   },
 });
 </script>
